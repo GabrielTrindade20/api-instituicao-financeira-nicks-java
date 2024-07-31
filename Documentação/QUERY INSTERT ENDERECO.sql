@@ -1,0 +1,11 @@
+INSERT INTO [dbo].[table_endereco] (bairro, cep, cidade, estado, logradouro, numero) VALUES
+    ('Bairro X', '12345678', 'Cidade 1', 'Estado 1', 'Rua A', 123),
+    ('Bairro Y', '23456789', 'Cidade 2', 'Estado 2', 'Rua B', 456),
+    ('Bairro Z', '34567890', 'Cidade 3', 'Estado 3', 'Rua C', 789),
+    ('Bairro W', '45678901', 'Cidade 4', 'Estado 4', 'Rua D', 1011),
+    ('Bairro V', '56789012', 'Cidade 5', 'Estado 5', 'Rua E', 1213),
+    ('Bairro U', '67890123', 'Cidade 6', 'Estado 6', 'Rua F', 1415),
+    ('Bairro T', '78901234', 'Cidade 7', 'Estado 7', 'Rua G', 1617),
+    ('Bairro S', '89012345', 'Cidade 8', 'Estado 8', 'Rua H', 1819),
+    ('Bairro R', '90123456', 'Cidade 9', 'Estado 9', 'Rua I', 2021),
+    ('Bairro Q', '01234567', 'Cidade 10', 'Estado 10', 'Rua J', 2223);
