@@ -9,7 +9,7 @@ Desenvolvimento de uma API de Banco, capaz de realizar todas as funcionalidades 
 - Spring Boot
 - SQL Server
 - Rest API
-- Padrão MV
+- Padrão MVC
 ```
 
 ## Objetivos do Projeto
