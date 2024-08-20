@@ -10,7 +10,5 @@ import com.projetoNicks.server.Entities.ClienteEntity;
 
 public interface ClienteRepository extends JpaRepository<ClienteEntity, Long> {
 
-//    @Query("SELECT c FROM ClienteEntity c WHERE c.idCliente = :idCliente")
-//    Optional<ClienteEntity> findByIdCliente(@Param("idCliente") Long idCliente);
 
 }
