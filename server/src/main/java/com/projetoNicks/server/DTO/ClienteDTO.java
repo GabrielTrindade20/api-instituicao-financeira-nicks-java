@@ -21,7 +21,7 @@ public class ClienteDTO {
 	private String cpf;
 	
 	private List<EnderecoDTO> enderecos;
-	private List<ContaDTO> contas;
+	private List<AccountDTO> contas;
 
 	public ClienteDTO(Long id, String nome, String email, String telefone, String cpf) {
 		this.id = id;

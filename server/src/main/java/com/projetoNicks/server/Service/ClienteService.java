@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.projetoNicks.server.DTO.ClienteDTO;
 import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
 import com.projetoNicks.server.Entities.ClienteEntity;
-import com.projetoNicks.server.Entities.ContaEntity;
+import com.projetoNicks.server.Entities.AccountEntity;
 import com.projetoNicks.server.Entities.EnderecoEntity;
 import com.projetoNicks.server.Repository.ClienteRepository;
 

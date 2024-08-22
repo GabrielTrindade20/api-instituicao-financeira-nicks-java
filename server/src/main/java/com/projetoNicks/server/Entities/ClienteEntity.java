@@ -57,5 +57,5 @@ public class ClienteEntity implements Serializable {
     private List<EnderecoEntity> enderecos;
 
     @OneToMany(mappedBy = "cliente")
-    private List<ContaEntity> contas;
+    private List<AccountEntity> contas;
 }

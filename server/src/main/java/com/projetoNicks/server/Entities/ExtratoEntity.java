@@ -43,5 +43,5 @@ public class ExtratoEntity {
 	private Double valor;
 	
 	@OneToMany(mappedBy = "extrato", fetch = FetchType.LAZY)
-	private List<TransacaoEntity> transacoes;
+	private List<TransactionsEntity> transacoes;
 }

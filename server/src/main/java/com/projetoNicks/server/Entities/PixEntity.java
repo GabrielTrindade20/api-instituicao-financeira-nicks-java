@@ -37,6 +37,6 @@ public class PixEntity {
 		@JoinColumn(name = "Fk_agencia_idAgencia", referencedColumnName = "Fk_agencia_idAgencia"),
 		@JoinColumn(name = "Fk_reserva_idReserva", referencedColumnName = "Fk_reserva_idReserva")
 	})
-	private ContaEntity conta;
+	private AccountEntity conta;
 	
 }

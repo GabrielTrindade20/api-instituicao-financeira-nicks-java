@@ -24,7 +24,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-public class TransacaoEntity {
+public class TransactionsEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,7 +45,7 @@ public class TransacaoEntity {
 				joinColumns = @JoinColumn(name = "Fk_transacao_idTransacao"), 
 				inverseJoinColumns = @JoinColumn(name = "Fk_conta_idConta")
 	)
-	private List<ContaEntity> contas;
+	private List<AccountEntity> contas;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Fk_extrato_idExtrato")
