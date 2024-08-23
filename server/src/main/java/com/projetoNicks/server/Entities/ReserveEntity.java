@@ -12,17 +12,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TableReserva")
+@Table(name = "TableReserve")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter 
-public class ReservaEntity {
+public class ReserveEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idReserva")
+	@Column(name = "idReserve")
 	private Long Id;
 	
-	@Column(name = "valor")
-	private double valor;
+	@Column(name = "value")
+	private double value;
 }

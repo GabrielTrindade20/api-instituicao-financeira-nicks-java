@@ -27,16 +27,16 @@ public class PixEntity {
 	@Column(name = "idPix")
 	private Long Id;
 	
-	@Column(name = "chave")
-	private int chave;
+	@Column(name = "key")
+	private int key;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumns({
-		@JoinColumn(name = "Fk_conta_idConta", referencedColumnName = "idConta"),
-		@JoinColumn(name = "Fk_tipoConta_idTipoConta", referencedColumnName = "Fk_tipoConta_idTipoConta"),
-		@JoinColumn(name = "Fk_agencia_idAgencia", referencedColumnName = "Fk_agencia_idAgencia"),
-		@JoinColumn(name = "Fk_reserva_idReserva", referencedColumnName = "Fk_reserva_idReserva")
+		@JoinColumn(name = "Fk_account_idAccount", referencedColumnName = "idAccount"),
+		@JoinColumn(name = "Fk_accountType_idAccountType", referencedColumnName = "Fk_AccountType_idAccountType"),
+		@JoinColumn(name = "Fk_agency_idAgency", referencedColumnName = "Fk_agency_idAgency"),
+		@JoinColumn(name = "Fk_reserve_idReserve", referencedColumnName = "Fk_reserve_idReserve")
 	})
-	private AccountEntity conta;
+	private AccountEntity Account;
 	
 }

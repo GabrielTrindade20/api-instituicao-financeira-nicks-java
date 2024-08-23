@@ -22,26 +22,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TableExtrato")
+@Table(name = "TableBankStatement")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-public class ExtratoEntity {
+public class BankStatementEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idExtrato")
+	@Column(name = "idBankStatement")
 	private Long Id;
 	
 	@Column(name = "dataTime")
 	private ZonedDateTime datetime;
 	
-	@Column(name = "tipo")
-	private String tipo;
+	@Column(name = "transactionType")
+	private String transactionType;
 	
-	@Column(name = "valor")
-	private Double valor;
+	@Column(name = "value")
+	private Double value;
 	
-	@OneToMany(mappedBy = "extrato", fetch = FetchType.LAZY)
-	private List<TransactionsEntity> transacoes;
+	@OneToMany(mappedBy = "bankStatement", fetch = FetchType.LAZY)
+	private List<TransactionsEntity> transaction;
 }
