@@ -10,31 +10,31 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name= "TableEndereco")
+@Table(name= "TableAddress")
 @Getter @Setter
-public class EnderecoEntity {
+public class AddressEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idEndereco")
+	@Column(name = "idAddress")
 	private Long Id;
 	
-	@Column(name = "logradouro")
-	private String logradouro;
+	@Column(name = "publicPlace")
+	private String publicPlace;
 	
-	@Column(name = "bairro")
-	private String bairro;
+	@Column(name = "district ")
+	private String district;
 	
-	@Column(name = "numero")
-	private int numero;
+	@Column(name = "houseNumber")
+	private int houseNumber;
 	
-	@Column(name = "cep")
-	private int cep;
+	@Column(name = "zipCode")
+	private int zipCode;
 	
-	@Column(name = "cidade")
-	private String cidade;
+	@Column(name = "city")
+	private String city;
 	
-	@Column(name = "estado")
-	private String estado;
+	@Column(name = "state")
+	private String state;
 	
 }

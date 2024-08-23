@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.projetoNicks.server.DTO.ClienteDTO;
 import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
-import com.projetoNicks.server.Entities.ClienteEntity;
+import com.projetoNicks.server.Entities.CustomerEntity;
 import com.projetoNicks.server.Repository.ClienteRepository;
 import com.projetoNicks.server.Service.ClienteService;
 
@@ -30,7 +30,7 @@ public class ClienteController {
 
 	//Traz todos os clientes na base de dados
 	@GetMapping("/allClientes")
-	public List<ClienteEntity> getAllClientes(){
+	public List<CustomerEntity> getAllClientes(){
 		return clienteService.getList();
 	}
 	

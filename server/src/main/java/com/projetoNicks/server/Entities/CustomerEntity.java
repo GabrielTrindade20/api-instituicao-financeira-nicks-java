@@ -20,20 +20,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TableCliente")
+@Table(name = "TableCustomer")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-public class ClienteEntity implements Serializable {
+public class CustomerEntity implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idCliente")
-    private Long idCliente;
+    @Column(name = "idCustomer")
+    private Long id;
 
-    @Column(name = "nome")
+    @Column(name = "name")
     private String nome;
 
     @Column(name = "email")
@@ -42,20 +42,20 @@ public class ClienteEntity implements Serializable {
     @Column(name = "cpf")
     private String cpf;
 
-    @Column(name = "telefone")
-    private String telefone;
+    @Column(name = "phone")
+    private String telephone;
 
-    @Column(name = "senha")
-    private String senha;
+    @Column(name = "password")
+    private String password;
 
     @ManyToMany
     @JoinTable(
-            name = "TableCliente_tem_TableEndereco",
-            joinColumns = @JoinColumn(name = "Fk_cliente_idCliente"),
-            inverseJoinColumns = @JoinColumn(name = "Fk_endereco_idEndereco")
+            name = "TableCustomer_has_TableAddress",
+            joinColumns = @JoinColumn(name = "Fk_customer_idCustomer"),
+            inverseJoinColumns = @JoinColumn(name = "Fk_address_idAddress")
     )
-    private List<EnderecoEntity> enderecos;
+    private List<AddressEntity> address;
 
     @OneToMany(mappedBy = "cliente")
-    private List<AccountEntity> contas;
+    private List<AccountEntity> account;
 }

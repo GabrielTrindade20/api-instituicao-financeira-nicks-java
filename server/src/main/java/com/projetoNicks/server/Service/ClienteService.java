@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 
 import com.projetoNicks.server.DTO.ClienteDTO;
 import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
-import com.projetoNicks.server.Entities.ClienteEntity;
+import com.projetoNicks.server.Entities.CustomerEntity;
 import com.projetoNicks.server.Entities.AccountEntity;
-import com.projetoNicks.server.Entities.EnderecoEntity;
+import com.projetoNicks.server.Entities.AddressEntity;
 import com.projetoNicks.server.Repository.ClienteRepository;
 
 import lombok.NoArgsConstructor;
@@ -23,7 +23,7 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository clienteRepository;
 
-	public List<ClienteEntity> getList() {
+	public List<CustomerEntity> getList() {
 		return clienteRepository.findAll();
 	}
 

@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.projetoNicks.server.Entities.ClienteEntity;
+import com.projetoNicks.server.Entities.CustomerEntity;
 
-public interface ClienteRepository extends JpaRepository<ClienteEntity, Long> {
+public interface ClienteRepository extends JpaRepository<CustomerEntity, Long> {
 
 
 }
