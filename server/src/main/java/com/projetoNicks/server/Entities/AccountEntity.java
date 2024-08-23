@@ -42,7 +42,7 @@ public class AccountEntity implements Serializable {
 	@Column(name = "account_number", length = 6, unique = true, nullable = false)
 	private String accountNumber;
 
-	public AccountEntity(Long id, String accountNumber, Double balance, TipoContaEntity accountType, AgencyEntity agency,
+	public AccountEntity(Long id, String accountNumber, Double balance, AccountTypeEntity accountType, AgencyEntity agency,
 			ReserveEntity reserve, CustomerEntity customer, List<TransactionsEntity> transactions) {
 		super();
 		Id = id;
@@ -60,7 +60,7 @@ public class AccountEntity implements Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Fk_accountType_idAccountType")
-	private TipoContaEntity accountType;
+	private AccountTypeEntity accountType;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Fk_agency_idAgency")
@@ -101,11 +101,11 @@ public class AccountEntity implements Serializable {
 		this.balance = balance;
 	}
 
-	public TipoContaEntity getAccountType() {
+	public AccountTypeEntity getAccountType() {
 		return accountType;
 	}
 
-	public void setAccountType(TipoContaEntity accountType) {
+	public void setAccountType(AccountTypeEntity accountType) {
 		this.accountType = accountType;
 	}
 

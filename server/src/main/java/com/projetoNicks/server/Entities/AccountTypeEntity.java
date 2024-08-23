@@ -12,17 +12,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TableTipoConta")
+@Table(name = "TableAccountType")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-public class TipoContaEntity {
+public class AccountTypeEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idTipoConta")
+	@Column(name = "idAccountType")
 	private Long Id;
 	
-	private String tipo;
+	private String type;
 	
 }

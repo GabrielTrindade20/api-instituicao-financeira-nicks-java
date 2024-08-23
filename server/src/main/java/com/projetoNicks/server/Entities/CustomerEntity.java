@@ -34,7 +34,7 @@ public class CustomerEntity implements Serializable {
     private Long id;
 
     @Column(name = "name")
-    private String nome;
+    private String name;
 
     @Column(name = "email")
     private String email;
@@ -56,6 +56,6 @@ public class CustomerEntity implements Serializable {
     )
     private List<AddressEntity> address;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "account")
     private List<AccountEntity> account;
 }
