@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TableConta")
+@Table(name = "TableAccount")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
@@ -42,7 +42,7 @@ public class AccountEntity implements Serializable {
 	@Column(name = "account_number", length = 6, unique = true, nullable = false)
 	private String accountNumber;
 
-	public AccountEntity(Long id, String accountNumber, Double balance, TipoContaEntity accountType, AgenciaEntity agency,
+	public AccountEntity(Long id, String accountNumber, Double balance, TipoContaEntity accountType, AgencyEntity agency,
 			ReservaEntity reserve, ClienteEntity customer, List<TransactionsEntity> transactions) {
 		super();
 		Id = id;
@@ -64,7 +64,7 @@ public class AccountEntity implements Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Fk_agency_idAgency")
-	private AgenciaEntity agency;
+	private AgencyEntity agency;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Fk_reserve_idReserve")
@@ -109,11 +109,11 @@ public class AccountEntity implements Serializable {
 		this.accountType = accountType;
 	}
 
-	public AgenciaEntity getAgency() {
+	public AgencyEntity getAgency() {
 		return agency;
 	}
 
-	public void setAgency(AgenciaEntity agency) {
+	public void setAgency(AgencyEntity agency) {
 		this.agency = agency;
 	}
 
