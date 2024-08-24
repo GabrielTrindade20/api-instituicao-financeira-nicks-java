@@ -8,5 +8,5 @@ import com.projetoNicks.server.Entities.AccountEntity;
 
 public interface AccountRepository extends JpaRepository<AccountEntity, Long>{
 
-	Optional<AccountEntity> finbyAccountNumber(String accountNumber);
+	Optional<AccountEntity> findByAccountNumber(String accountNumber);
 }

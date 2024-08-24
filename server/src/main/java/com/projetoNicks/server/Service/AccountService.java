@@ -49,7 +49,7 @@ public class AccountService {
 
 	public AccountDTO getAccount(String code) {
 		// gets a database account
-		AccountEntity accountEntity = accountRepository.finbyAccountNumber(code)
+		AccountEntity accountEntity = accountRepository.findByAccountNumber(code)
 				.orElseThrow(() -> new RuntimeException("Account not found"));
 		
 		return mapEntitytoDto(accountEntity);

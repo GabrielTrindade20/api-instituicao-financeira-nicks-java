@@ -12,7 +12,7 @@ import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
 import com.projetoNicks.server.Entities.CustomerEntity;
 import com.projetoNicks.server.Entities.AccountEntity;
 import com.projetoNicks.server.Entities.AddressEntity;
-import com.projetoNicks.server.Repository.ClienteRepository;
+import com.projetoNicks.server.Repository.CustomerRepository;
 
 import lombok.NoArgsConstructor;
 
@@ -21,10 +21,10 @@ import lombok.NoArgsConstructor;
 public class ClienteService {
 
 	@Autowired
-	private ClienteRepository clienteRepository;
+	private CustomerRepository customerRepository;
 
 	public List<CustomerEntity> getList() {
-		return clienteRepository.findAll();
+		return customerRepository.findAll();
 	}
 
 }

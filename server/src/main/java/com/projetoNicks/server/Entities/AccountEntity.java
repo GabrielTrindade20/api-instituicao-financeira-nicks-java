@@ -76,6 +76,7 @@ public class AccountEntity implements Serializable {
 
 	@ManyToMany(mappedBy = "account")
 	private List<TransactionsEntity> transactions;
+	
 
 	public Long getId() {
 		return Id;

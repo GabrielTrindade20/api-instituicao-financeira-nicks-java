@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projetoNicks.server.DTO.ClienteDTO;
 import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
 import com.projetoNicks.server.Entities.CustomerEntity;
-import com.projetoNicks.server.Repository.ClienteRepository;
+import com.projetoNicks.server.Repository.CustomerRepository;
 import com.projetoNicks.server.Service.ClienteService;
 
 import lombok.RequiredArgsConstructor;
