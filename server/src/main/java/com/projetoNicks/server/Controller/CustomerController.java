@@ -13,25 +13,25 @@ import com.projetoNicks.server.DTO.ClienteDTO;
 import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
 import com.projetoNicks.server.Entities.CustomerEntity;
 import com.projetoNicks.server.Repository.CustomerRepository;
-import com.projetoNicks.server.Service.ClienteService;
+import com.projetoNicks.server.Service.CustomerService;
 
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/clientes")
 @RequiredArgsConstructor
-public class ClienteController {
+public class CustomerController {
 
-	private final ClienteService clienteService;
+	private final CustomerService customerService;
 
-    ClienteController(ClienteService clienteService) {
-        this.clienteService = clienteService;
+    CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
     }
 
 	//Traz todos os clientes na base de dados
 	@GetMapping("/allClientes")
 	public List<CustomerEntity> getAllClientes(){
-		return clienteService.getList();
+		return customerService.getList();
 	}
 	
 	//Traz os clientes com o id selecionado

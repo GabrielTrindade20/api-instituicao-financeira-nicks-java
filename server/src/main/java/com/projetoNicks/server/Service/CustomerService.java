@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Service
-public class ClienteService {
+public class CustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
