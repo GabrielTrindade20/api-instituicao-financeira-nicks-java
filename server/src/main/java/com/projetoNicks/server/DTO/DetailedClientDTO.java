@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter @Getter
-public class ClienteDetalhadoDTO {
+public class DetailedClientDTO {
 	private Long idCliente;
     private String nome;
     private String email;
@@ -27,7 +27,7 @@ public class ClienteDetalhadoDTO {
     private Double saldoConta;
     
     
-	public ClienteDetalhadoDTO(Long idCliente, String nome, String email, String cpf, String telefone, String senha,
+	public DetailedClientDTO(Long idCliente, String nome, String email, String cpf, String telefone, String senha,
 			Long idEndereco, String logradouro, String bairro, Integer numero, Integer cep, String cidade,
 			String estado, Long idConta, Integer codigoConta, Double saldoConta) {
 		super();

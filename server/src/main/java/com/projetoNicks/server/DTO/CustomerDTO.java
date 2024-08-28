@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Data
 @Getter @Setter
-public class ClienteDTO {
+public class CustomerDTO {
 	
 	private Long id;
 	private String nome;
@@ -20,10 +20,10 @@ public class ClienteDTO {
 	private String telefone;
 	private String cpf;
 	
-	private List<EnderecoDTO> enderecos;
+	private List<AddressDTO> enderecos;
 	private List<AccountDTO> contas;
 
-	public ClienteDTO(Long id, String nome, String email, String telefone, String cpf) {
+	public CustomerDTO(Long id, String nome, String email, String telefone, String cpf) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;

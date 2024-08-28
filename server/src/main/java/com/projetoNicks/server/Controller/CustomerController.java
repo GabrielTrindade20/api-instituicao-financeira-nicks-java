@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projetoNicks.server.DTO.ClienteDTO;
-import com.projetoNicks.server.DTO.ClienteDetalhadoDTO;
+import com.projetoNicks.server.DTO.CustomerDTO;
+import com.projetoNicks.server.DTO.DetailedClientDTO;
 import com.projetoNicks.server.Entities.CustomerEntity;
 import com.projetoNicks.server.Repository.CustomerRepository;
 import com.projetoNicks.server.Service.CustomerService;
@@ -18,7 +18,7 @@ import com.projetoNicks.server.Service.CustomerService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/api/customer")
 @RequiredArgsConstructor
 public class CustomerController {
 
@@ -28,16 +28,16 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-	//Traz todos os clientes na base de dados
-	@GetMapping("/allClientes")
+	//Get all customer from database
+	@GetMapping("/allCustomer")
 	public List<CustomerEntity> getAllClientes(){
 		return customerService.getList();
 	}
 	
-	//Traz os clientes com o id selecionado
+	//Get customer by id
 //	@GetMapping("/{id}")
-//	 public ResponseEntity<ClienteDetalhadoDTO> buscarClienteDetalhado(@PathVariable Long id) {
-//        ClienteDetalhadoDTO clienteDetalhadoDTO = clienteService.buscarClienteDetalhado(id);
+//	 public ResponseEntity<CustomerDTOu> buscarClienteDetalhado(@PathVariable Long id) {
+//        CustomerDTO clienteDetalhadoDTO = CustomerService.buscarClienteDetalhado(id);
 //        return ResponseEntity.ok(clienteDetalhadoDTO);
 //    }
 	

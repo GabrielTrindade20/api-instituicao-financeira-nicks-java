@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Data
 @Getter @Setter
-public class EnderecoDTO {
+public class AddressDTO {
 
 	private Long id;
 	private String logradouro;
@@ -19,7 +19,7 @@ public class EnderecoDTO {
 	private String cidade;
 	private String estado;
 	
-	public EnderecoDTO(Long id, String logradouro, String bairro, int numero, int cep, String cidade, String estado) {
+	public AddressDTO(Long id, String logradouro, String bairro, int numero, int cep, String cidade, String estado) {
 		this.id = id;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
