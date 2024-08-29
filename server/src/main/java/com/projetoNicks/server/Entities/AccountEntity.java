@@ -38,8 +38,8 @@ public class AccountEntity implements Serializable {
 		
 	}
 
-	//Constructor
-	@Column(name = "account_number", length = 6, unique = true, nullable = false)
+
+	@Column(name = "account_number", length = 8, unique = true, nullable = false)
 	private String accountNumber;
 
 	public AccountEntity(Long id, String accountNumber, Double balance, AccountTypeEntity accountType, AgencyEntity agency,

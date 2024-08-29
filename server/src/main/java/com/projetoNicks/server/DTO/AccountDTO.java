@@ -1,5 +1,6 @@
 package com.projetoNicks.server.DTO;
 
+import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
@@ -14,6 +15,8 @@ import lombok.Setter;
 public class AccountDTO {
 	
 	private Long id;
+	
+	@Pattern(regexp = "^[0-9]{6}-[0-9]{1}", message = "invalid format. Use xxxxxx-x")
 	private String accountNumber;
 	private Double balance;
 	
