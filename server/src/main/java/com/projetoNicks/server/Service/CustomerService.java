@@ -2,6 +2,7 @@ package com.projetoNicks.server.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,7 +71,12 @@ public class CustomerService {
 	}
 
 	private AccountDTO mapAccountEntityToDto(AccountEntity accountEntity) {
-		return new AccountDTO(); 
+		return new AccountDTO();
+	}
+
+	// method to get all customers
+	public List<CustomerDTO> getAllCustomer() {
+		return customerRepository.findAll().stream().map(this::mapEntityDto).collect(Collectors.toList());
 	}
 
 }
