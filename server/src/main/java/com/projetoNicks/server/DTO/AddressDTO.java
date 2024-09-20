@@ -28,4 +28,8 @@ public class AddressDTO {
 		this.cidade = cidade;
 		this.estado = estado;
 	}
+
+	public AddressDTO() {
+		// TODO Auto-generated constructor stub
+	}
 }

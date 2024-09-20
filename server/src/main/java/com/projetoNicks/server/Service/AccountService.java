@@ -44,7 +44,7 @@ public class AccountService {
 	public AccountDTO getAccountByNumberAccount(String accountNumber) {
 		AccountEntity accountEntity = accountRepository.findByAccountNumber(accountNumber)
 				.orElseThrow(() -> new RuntimeException("Account not found"));
-		
+
 		return mapEntitytoDto(accountEntity);
 	}
 
@@ -89,5 +89,11 @@ public class AccountService {
 	}
 
 	// method to update a account
+	public void updateBalance(String accountNumber, double newBalance) {
+		AccountEntity accountEntity = accountRepository.findByAccountNumber(accountNumber)
+				.orElseThrow(() -> new RuntimeException("account not found"));
 
+		accountEntity.setBalance(newBalance);
+		accountRepository.save(accountEntity);
+	}
 }
