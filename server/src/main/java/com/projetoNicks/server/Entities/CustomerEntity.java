@@ -119,8 +119,8 @@ public class CustomerEntity implements Serializable {
 		return account;
 	}
 
-	public void setCustomer(List<AccountEntity> customer) {
-		this.account = customer;
+	public void setAccount(List<AccountEntity> account) {
+		this.account = account;
 	}
 	
 	

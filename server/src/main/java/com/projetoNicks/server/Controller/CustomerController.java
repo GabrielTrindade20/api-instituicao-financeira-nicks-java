@@ -30,8 +30,9 @@ public class CustomerController {
 
 	//Get all customer from database
 	@GetMapping("/allCustomer")
-	public List<CustomerEntity> getAllClientes(){
-		return customerService.getList();
+	public ResponseEntity<List<CustomerDTO>> getAllClientes(){
+		List<CustomerDTO> customers = customerService.getAllCustomer();
+		return ResponseEntity.ok(customers);
 	}
 	
 	//Get customer by id
